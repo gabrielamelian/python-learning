@@ -17,7 +17,7 @@ Made to run up to 100 times
 
 def Fseq():
     i = 0
-    a,b = 0,1
+    a, b = 0, 1
     print a
     print b
     while i < 100:
