@@ -33,3 +33,11 @@ def example4(manatees):
             else:
                 oldest_manatee = manatee1['name']
     print oldest_manatee
+
+
+"""
+Example1 = O(n)
+Example2 = O(1)
+Example1 = O(n*m)
+Example1 = O(n^2)
+"""
