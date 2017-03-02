@@ -35,6 +35,8 @@ class LinkedList(object):
         """Get an element from a particular position.
         Assume the first position is "1".
         Return "None" if position is not in the list."""
+        current = self.head
+        current_pos = 1
 
         def find_obj(current, position, current_pos):
             if current_pos == position:
@@ -46,12 +48,8 @@ class LinkedList(object):
             else:
                 return None
 
-        if self.head:
-            current = self.head
-            current_pos = 1
-            return find_obj(current, position, current_pos)
-        else:
-            return None
+        return find_obj(current, position, current_pos)
+
 
 
     def insert(self, new_element, position):
