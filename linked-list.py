@@ -41,12 +41,10 @@ class LinkedList(object):
         def find_obj(current, position, current_pos):
             if current_pos == position:
                 return current
-            elif current.next:
+            else:
                 current = current.next
                 current_pos += 1
                 return find_obj(current, position, current_pos)
-            else:
-                return None
 
         return find_obj(current, position, current_pos)
 
