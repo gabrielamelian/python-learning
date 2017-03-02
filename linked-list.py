@@ -49,18 +49,30 @@ class LinkedList(object):
         return find_obj(current, position, current_pos)
 
 
-
     def insert(self, new_element, position):
         """Insert a new node at the given position.
         Assume the first position is "1".
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
-        pass
+
+        prev_elem = self.get_position(position - 1)
+        new_element.next = prev_elem.next
+        prev_elem.next = new_element
 
 
     def delete(self, value):
         """Delete the first node with a given value."""
-        pass
+        current = self.head
+        current_pos = 1
+        while current.value != value:
+            current_pos += 1
+            current = current.next
+
+        if (current_pos == 1):
+            self.head = current.next
+        else:
+            prev_elem = self.get_position(current_pos - 1)
+            prev_elem.next = current.next
 
 
 # Test cases
