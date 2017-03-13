@@ -43,11 +43,20 @@ class Stack(object):
 
     def push(self, new_element):
         "Push (add) a new element onto the top of the stack"
-        pass
+        self.ll.append(new_element)
 
     def pop(self):
         "Pop (remove) the first element off the top of the stack and return it"
-        pass
+        top_element = self.ll.head
+        if top_element and top_element.next:
+            while top_element.next:
+                prev_elem = top_element
+                top_element = top_element.next
+            prev_elem.next = None
+        else:
+            self.ll.head = None
+        return top_element
+
 
 # Test cases
 # Set up some Elements
