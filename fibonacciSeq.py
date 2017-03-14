@@ -11,6 +11,14 @@ Takes a long time to run.
 #
 # print F(34)
 
+def F(n):
+    if n == 0 or n == 1:
+        return n
+    return F(n - 1) + F(n - 2)
+
+
+print F(34)
+
 """
 Solution to Fibonacci sequence.
 Made to run up to 100 times
